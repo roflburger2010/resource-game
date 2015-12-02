@@ -1,7 +1,7 @@
 #ifndef ENGINE_H_INCLUDED
 #define ENGINE_H_INCLUDED
 
-#include "sdl.h"
+#include <SDL2/SDL.H>
 
 class Engine {
 public:
@@ -13,11 +13,11 @@ public:
 private:
     SDL_Window* window;
 
-    /*Initializes the engine, returns true if there was an error.*/
+    /*Initializes the engine, returns true upon successful initialization.*/
     bool init();
     /*The loop in which all of our engines operations will take place after initialization.*/
-    void MainLoop();
-    /*Function used to render all of our graphics to the screen and present it to the user.
+    void mainLoop();
+    /*Function used to render all of our graphics to the screen and present it to the user.*/
     void renderFrame();
     /*Checks for user input and acts accordingly if there is any.*/
     void processInput();
